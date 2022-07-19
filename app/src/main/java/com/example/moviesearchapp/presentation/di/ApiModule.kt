@@ -19,6 +19,24 @@ object ApiModule {
 
     @Singleton
     @Provides
+    fun provideRemoteDataSource(
+        naverApiService: NaverApiService
+    ): RemoteDataSource {
+        return RemoteDataSourceImpl(
+            naverApiService
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideNaverApiService(
+        retrofit: Retrofit
+    ): NaverApiService {
+        return retrofit.create(NaverApiService::class.java)
+    }
+
+    @Singleton
+    @Provides
     fun provideRetrofit(
         client: OkHttpClient,
         converter: GsonConverterFactory
