@@ -10,4 +10,19 @@
         android:name="com.example.moviesearchapp.presentation.view.fragment.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
+
+    <dialog
+        android:id="@+id/networkDialogFragment"
+        android:name="com.example.moviesearchapp.presentation.view.fragment.network.NetworkDialogFragment"
+        android:label="NetworkDialogFragment"
+        tools:layout="@layout/fragment_network_dialog" >
+        <argument
+            android:name="networkState"
+            app:argType="com.example.moviesearchapp.presentation.view.fragment.network.NetworkStatus"
+            android:defaultValue="CONNECT_ERROR" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_networkDialogFragment"
+        app:destination="@id/networkDialogFragment" />
 </navigation>
