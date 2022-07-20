@@ -1,3 +1,7 @@
+package com.example.moviesearchapp.data.mapper
+
+import com.example.moviesearchapp.data.model.MovieInfo
+import com.example.moviesearchapp.domain.model.MovieInfoModel
 
 object ObjectMapper {
     fun List<MovieInfo>.toMovieInfoListModel(): List<MovieInfoModel> = map {

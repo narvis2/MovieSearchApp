@@ -1,11 +1,13 @@
 package com.example.moviesearchapp.presentation.di
 
 import com.example.moviesearchapp.BuildConfig
+import com.example.moviesearchapp.data.api.NaverApiService
+import com.example.moviesearchapp.data.repository.datasource.RemoteDataSource
+import com.example.moviesearchapp.data.repository.datasourceImpl.RemoteDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.Cookie
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
