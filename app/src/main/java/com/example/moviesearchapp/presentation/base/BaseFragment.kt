@@ -59,14 +59,6 @@ abstract class BaseFragment<B : ViewDataBinding, VM : BaseViewModel>(
             }
         }
 
-        viewModel.isLoading.observeOnLifecycleDestroy(viewLifecycleOwner) { show ->
-            if (show) {
-                showLoadingDialog()
-            } else {
-                hideLoadingDialog()
-            }
-        }
-
         viewModel.backStack.observeOnLifecycleStop(viewLifecycleOwner) {
             if (it) {
                 findNavController().popBackStack()
@@ -78,14 +70,6 @@ abstract class BaseFragment<B : ViewDataBinding, VM : BaseViewModel>(
         viewModel.showSnackBar.observeOnLifecycleStop(viewLifecycleOwner) {
             showSnackBar(requireActivity().window?.decorView ?: binding.root, it.first, paddingVertical = it.second)
         }
-    }
-
-    private fun showLoadingDialog() {
-        (activity as? BaseActivity<*, *>)?.showLoadingDialog()
-    }
-
-    private fun hideLoadingDialog() {
-        (activity as? BaseActivity<*, *>)?.hideLoadingDialog()
     }
 
     protected fun LifecycleOwner.repeatOnStarted(block: suspend CoroutineScope.() -> Unit) {

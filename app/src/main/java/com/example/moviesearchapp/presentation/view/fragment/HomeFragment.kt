@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.webkit.WebView
 import androidx.fragment.app.viewModels
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,8 @@ import com.example.moviesearchapp.presentation.base.MyLoadStateAdapter
 import com.example.moviesearchapp.presentation.utils.KeyboardUtils
 import com.example.moviesearchapp.presentation.utils.observeInLifecycleStop
 import com.example.moviesearchapp.presentation.utils.observeOnLifecycleStop
+import com.example.moviesearchapp.presentation.view.activity.MainActivity
+import com.example.moviesearchapp.presentation.view.activity.web.WebViewActivity
 import com.example.moviesearchapp.presentation.view.fragment.adapter.MovieInfoAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.onEach
@@ -130,7 +133,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
 
         movieInfoAdapter.setOnItemClickListener(object : MovieInfoAdapter.OnItemClickListener {
             override fun onClick(item: MovieInfoModel, position: Int) {
-                // TODO: WebView 로 이동
+                startActivity(WebViewActivity.getInAppBrowserIntent(
+                    activity = requireActivity(),
+                    url = item.link,
+                    pageTitle = "영화 상세 정보",
+                    showTitle = true
+                ))
             }
         })
 

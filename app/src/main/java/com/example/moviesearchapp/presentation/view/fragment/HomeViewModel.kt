@@ -50,7 +50,11 @@ class HomeViewModel @Inject constructor(
 
     fun onSearchClick() = viewModelScope.launch {
         hideKeyboard()
-        if (searchQuery.value.isBlank()) return@launch
+        if (searchQuery.value.isBlank()) {
+            showSnackBar("영화 제목을 검색해 주세요.", 50)
+            return@launch
+        }
+
         _search.send(Unit)
     }
 
