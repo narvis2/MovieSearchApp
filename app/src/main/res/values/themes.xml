@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+    </style>
+
+    <style name="FloatingActionButtonStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:src">@drawable/ico_top</item>
+        <item name="tint">@null</item>
+        <item name="fabSize">normal</item>
+        <item name="fabCustomSize">64dp</item>
+        <item name="maxImageSize">56dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 </resources>

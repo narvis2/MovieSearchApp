@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface NaverApiService {
 
-    @GET("/search/movie")
+    @GET("/v1/search/movie")
     suspend fun searchMovie(
         @Query("query") query: String,
         @Query("start") start: Int,

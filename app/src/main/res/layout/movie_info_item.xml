@@ -19,21 +19,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:background="@drawable/item_bg"
         app:onSingleClick="@{presenter::onRootClick}">
 
         <ImageView
             android:id="@+id/mainImageIv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:error="@{com.example.moviesearchapp.R.drawable.search_none}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:loadImage="@{info.image}"
-            app:placeHolder="@{com.example.moviesearchapp.R.drawable.img_ready_rec}"
-            app:error="@{com.example.moviesearchapp.R.drawable.img_ready_rec}"
+            app:placeHolder="@{com.example.moviesearchapp.R.drawable.search_none}"
             tools:src="@drawable/search_none" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -49,9 +52,9 @@
                 android:id="@+id/titleTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{info.title}"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                app:htmlToString="@{info.title}"
                 tools:text="액스맨: 다크 피닉스" />
 
             <RatingBar
@@ -60,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:numStars="5"
-                android:rating="@{info.userRating}"
+                android:rating="@{info.rating}"
                 android:stepSize="0.1"
                 tools:rating="4" />
 
@@ -68,8 +71,8 @@
                 android:id="@+id/dateTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
                 android:text="@{info.pubDate}"
+                android:textSize="13sp"
                 tools:text="2022" />
 
             <LinearLayout
@@ -82,16 +85,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="감독 : "
+                    android:text="@{@string/str_director(info.director)}"
                     android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/directorTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{info.director}"
-                    android:textSize="13sp"
-                    tools:text="사이먼 킨버그" />
 
             </LinearLayout>
 
@@ -105,16 +100,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="배우 : "
+                    android:text="@{@string/str_actors(info.actor.isEmpty ? @string/str_no_actors : info.actor)}"
                     android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/actorTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{info.actor}"
-                    android:textSize="13sp"
-                    tools:text="사이먼 킨버그" />
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

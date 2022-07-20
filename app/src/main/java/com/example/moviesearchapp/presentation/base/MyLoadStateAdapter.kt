@@ -36,6 +36,7 @@ class MyLoadStateAdapter(private val retry: () -> Unit) : LoadStateAdapter<MyLoa
         }
 
         fun bind(loadState: LoadState) {
+            // endOfPaginationReached -> 로드할 데이터가 더 있으면 false 이고, 로드할 데이터가 없으면 true
             if (loadState is LoadState.NotLoading && loadState.endOfPaginationReached) {
                 binding.progressBar.isVisible = false
                 binding.retryButton.isVisible = false

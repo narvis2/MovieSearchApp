@@ -2,8 +2,12 @@ package com.example.moviesearchapp.presentation.utils
 
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
+import android.os.Build
+import android.text.Html
+import android.text.TextWatcher
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -19,6 +23,15 @@ fun ImageView.loadImage(
     @DrawableRes
     error: Int = 0,
 ) {
+    // imageUrl 이 비어있을 때 로직 추가
+    if (imageUrl.isEmpty()) {
+        if (placeholder != 0) {
+            this.setImageResource(placeholder)
+        }
+
+        return
+    }
+
     val options = RequestOptions()
 
     @SuppressLint("CheckResult")
@@ -59,4 +72,24 @@ fun View.onSingleClick(listener: View.OnClickListener? = null, interval: Long? =
     } else {
         setOnClickListener(null)
     }
+}
+
+@BindingAdapter("htmlToString")
+fun TextView.htmlToString(text: String) {
+    this.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY).toString()
+    } else {
+        Html.fromHtml(text).toString()
+    }
+}
+
+@BindingAdapter(value = ["setOnFocusChangeListener"])
+fun View.setOnFocusChangeListener(focusListener: View.OnFocusChangeListener) {
+    onFocusChangeListener = focusListener
+}
+
+@BindingAdapter(value = ["addTextChangedListener"])
+fun TextView.addTextChangedListener(watcher: TextWatcher) {
+    removeTextChangedListener(watcher)
+    addTextChangedListener(watcher)
 }
