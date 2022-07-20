@@ -1,4 +1,4 @@
-package com.example.moviesearchapp.data.model
+package com.example.moviesearchapp.domain.model
 
 data class MovieInfoModel(
     val title: String,
