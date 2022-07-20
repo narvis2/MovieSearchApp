@@ -9,4 +9,5 @@
     <string name="str_actors">배우 : %1$s</string>
     <string name="str_no_search">검색 결과가 존재하지 않습니다.</string>
     <string name="str_no_actors">등록된 배우가 없습니다.</string>
+    <string name="str_detail_movie">%1$s 상세 정보</string>
 </resources>

@@ -8,11 +8,6 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
-
-    private val _isLoading = MutableStateFlow<Boolean>(false)
-    val isLoading: StateFlow<Boolean>
-        get() = _isLoading
-
     private val _hideKeyboard = MutableSharedFlow<Boolean>(
         replay = 1,
         extraBufferCapacity = 0,
@@ -31,14 +26,6 @@ abstract class BaseViewModel : ViewModel() {
 
     private val _showSnackBar = Channel<Pair<String, Int>>(Channel.CONFLATED)
     val showSnackBar = _showSnackBar.receiveAsFlow()
-
-    fun showLoadingDialog() = viewModelScope.launch {
-        _isLoading.emit(true)
-    }
-
-    fun hideLoadingDialog() = viewModelScope.launch{
-        _isLoading.emit(false)
-    }
 
     fun hideKeyboard() = viewModelScope.launch {
         _hideKeyboard.emit(true)
