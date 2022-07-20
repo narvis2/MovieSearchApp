@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="noResultText"
+            type="String" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/noResultLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="132dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.7dp"
+                android:src="@drawable/search_none"/>
+
+            <TextView
+                android:id="@+id/noResultTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:letterSpacing="-0.02"
+                android:lineHeight="20sp"
+                android:text="@{noResultText}"
+                android:textColor="#777777"
+                android:textSize="14sp"
+                tools:text="검색된 결과가 없습니다."/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/drawable/positive_bg.xml" value="0.2965" />
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/drawable/round_frame.xml" value="0.2965" />
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/drawable/round_frame2.xml" value="0.2965" />
         <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/drawable/round_frame3.xml" value="0.2965" />
         <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/activity_main.xml" value="0.5296875" />
         <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/custom_toast.xml" value="0.5296875" />
         <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/fragment_home.xml" value="0.5296875" />
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/item_load_state_footer_view.xml" value="0.5296875" />
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/movie_info_item.xml" value="0.5296875" />
+        <entry key="..\:/Users/double_media/Desktop/sample/MovieSearchApp/app/src/main/res/layout/no_result_layout.xml" value="0.5296875" />
       </map>
     </option>
   </component>
