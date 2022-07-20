@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MovieSearchApp</string>
     <string name="main_back_pressed">\"뒤로\" 버튼을 한번 더 누르면 종료됩니다.</string>
+    <string name="str_retry">새로고침</string>
+    <string name="str_load_state_error">리스트를 가져오는데 실패했습니다.\n잠시 후 다시 시도해 주세요.</string>
+    <string name="str_movie_search">영화 이름을 검색해 주세요.</string>]
+    <string name="str_search">검색</string>
 </resources>
