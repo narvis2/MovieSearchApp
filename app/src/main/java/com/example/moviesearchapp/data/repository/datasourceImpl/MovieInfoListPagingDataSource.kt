@@ -34,14 +34,17 @@ class MovieInfoListPagingDataSource @Inject constructor(
             if (response.isSuccessful) {
                 response.body()?.let {
                     val movieList = it.items.toMovieInfoListModel()
-                    val lastPage = floor(it.total / limit.toDouble()).toInt() + 1
-                    val originStart = ((it.start / limit) - 1)
 
+                    /**
+                     * nextKey -> naver Api의 start 는 index 이고, 현재 display(limit) 가 10 이므로
+                     * 10 이후에 start 값은 11 이 되어야함
+                     * 스크롤될 때 마다 10개씩 가져온다.
+                     */
                     return LoadResult.Page(
                         data = movieList,
                         prevKey = null,
-                        nextKey = if (lastPage >= originStart && it.items.size >= limit) {
-                            pageNumber * limit + 1
+                        nextKey = if (it.items.size >= limit) {
+                            pageNumber + limit
                         } else {
                             null
                         }
