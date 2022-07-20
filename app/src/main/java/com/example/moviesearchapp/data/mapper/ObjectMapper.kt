@@ -13,7 +13,7 @@ object ObjectMapper {
             pubDate= it.pubDate,
             director= it.director,
             actor= it.actor,
-            userRating= it.userRating
+            userRating= it.userRating.toFloat()
         )
     }
 
@@ -25,6 +25,6 @@ object ObjectMapper {
         pubDate= this.pubDate,
         director= this.director,
         actor= this.actor,
-        userRating= this.userRating
+        userRating= this.userRating.toFloat()
     )
 }
