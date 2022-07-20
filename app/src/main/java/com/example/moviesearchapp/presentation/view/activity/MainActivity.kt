@@ -5,10 +5,13 @@ import androidx.activity.addCallback
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.example.moviesearchapp.NavigationDirections
 import com.example.moviesearchapp.R
 import com.example.moviesearchapp.databinding.ActivityMainBinding
 import com.example.moviesearchapp.presentation.base.BaseActivity
 import com.example.moviesearchapp.presentation.utils.showSnackBar
+import com.example.moviesearchapp.presentation.view.fragment.network.NetworkStatus
+import com.example.moviesearchapp.presentation.view.fragment.network.NetworkViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,6 +19,8 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     R.layout.activity_main
 ) {
     override val viewModel: MainViewModel by viewModels()
+
+    private val networkViewModel: NetworkViewModel by viewModels()
 
     private lateinit var navController: NavController
 
@@ -43,5 +48,26 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
                 }
             }
         }
+
+        networkViewModel.register(true)
+        initNetworkViewModelCallback()
+    }
+
+    private fun initNetworkViewModelCallback() = with (networkViewModel) {
+        currentNetworkStatus.observe(this@MainActivity) {
+            when (it) {
+                NetworkStatus.CONNECT_NETWORK -> {}
+                else -> {
+                    navController.navigate(
+                        NavigationDirections.actionGlobalNetworkDialogFragment(it)
+                    )
+                }
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        networkViewModel.unRegister()
+        super.onDestroy()
     }
 }

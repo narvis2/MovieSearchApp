@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+
+        <import type="com.example.moviesearchapp.presentation.view.fragment.network.NetworkStatus" />
+
+        <variable
+            name="viewModel"
+            type="com.example.moviesearchapp.presentation.view.fragment.network.NetworkViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.view.fragment.network.NetworkDialogFragment"
+        android:background="#55000000">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTranslucentDim">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="200dp"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/search_none_w" />
+
+                <TextView
+                    android:id="@+id/networkTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.8dp"
+                    android:layout_marginBottom="17.2dp"
+                    android:gravity="center"
+                    android:letterSpacing="-0.02"
+                    android:lineHeight="20sp"
+                    android:lineSpacingExtra="6sp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/str_retry_disabled_network"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/retryBtn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="89dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/positive_bg2"
+                        android:letterSpacing="-0.02"
+                        android:lineSpacingExtra="-4sp"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:text="@string/str_retry"
+                        app:onSingleClick="@{() -> viewModel.onReTryClick()}"
+                        tools:text="@string/str_retry"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>
