@@ -10,6 +10,7 @@ import com.example.moviesearchapp.data.repository.datasourceImpl.MovieInfoListPa
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
@@ -26,6 +27,6 @@ class NaverRepositoryImpl @Inject constructor(
                     limit = 10
                 )
             }
-        ).flow.flowOn(Dispatchers.IO)
+        ).flow.distinctUntilChanged().flowOn(Dispatchers.IO)
     }
 }

@@ -18,7 +18,7 @@ android {
         versionName "1.0"
         buildConfigField ("String", "NAVE_CLIENT_ID", "\"rP8PEBH4MIBMeT46ZnxY\"")
         buildConfigField ("String", "NAVE_CLIENT_SECRET", "\"lPjMbS7dJ3\"")
-        buildConfigField ("String", "API_HOST", "\"https://openapi.naver.com/v1/\"")
+        buildConfigField ("String", "API_HOST", "\"https://openapi.naver.com/\"")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

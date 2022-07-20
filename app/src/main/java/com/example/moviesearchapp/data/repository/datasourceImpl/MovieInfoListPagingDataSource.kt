@@ -23,12 +23,10 @@ class MovieInfoListPagingDataSource @Inject constructor(
         val pageNumber = params.key ?: 1
 
         try {
-            val offset = (pageNumber - 1) * limit
-
             val response = withContext(Dispatchers.IO) {
                 remoteDataSource.requestSearchMovie(
                     query = searchQuery.value,
-                    start = offset,
+                    start = pageNumber,
                     display = limit
                 )
             }
@@ -37,12 +35,13 @@ class MovieInfoListPagingDataSource @Inject constructor(
                 response.body()?.let {
                     val movieList = it.items.toMovieInfoListModel()
                     val lastPage = floor(it.total / limit.toDouble()).toInt() + 1
+                    val originStart = ((it.start / limit) - 1)
 
                     return LoadResult.Page(
                         data = movieList,
                         prevKey = null,
-                        nextKey = if (lastPage >= it.start && it.items.size >= limit) {
-                            it.start + 1
+                        nextKey = if (lastPage >= originStart && it.items.size >= limit) {
+                            pageNumber * limit + 1
                         } else {
                             null
                         }
