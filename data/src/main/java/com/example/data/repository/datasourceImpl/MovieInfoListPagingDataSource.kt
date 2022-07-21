@@ -37,7 +37,7 @@ class MovieInfoListPagingDataSource @Inject constructor(
                     /**
                      * nextKey -> naver Api의 start 는 index 이고, 현재 display(limit) 가 10 이므로
                      * 10 이후에 start 값은 11 이 되어야함
-                     * 스크롤될 때 마다 10개씩 가져온다.
+                     * 스크롤되어 페이지가 추가될때 마다 10개씩 가져온다.
                      */
                     return LoadResult.Page(
                         data = movieList,
