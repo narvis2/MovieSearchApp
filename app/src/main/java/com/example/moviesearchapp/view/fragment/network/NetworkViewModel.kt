@@ -89,6 +89,7 @@ class NetworkViewModel @Inject constructor(
             isNetworkConn && (isWifiConn || isCellularConn) -> {
                 NetworkStatus.CONNECT_NETWORK
             }
+
             else -> {
                 NetworkStatus.DISCONNECT_NETWORK
             }
@@ -107,6 +108,7 @@ class NetworkViewModel @Inject constructor(
         } else {
             isNetworkConn = true
         }
+
         registerWifi()
         registerCellular()
 

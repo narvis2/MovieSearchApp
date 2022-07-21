@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
@@ -18,8 +19,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:background="@drawable/item_bg"
+        android:padding="10dp"
         app:onSingleClick="@{presenter::onRootClick}">
 
         <ImageView
@@ -33,7 +34,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:loadImage="@{info.image}"
             app:placeHolder="@{com.example.moviesearchapp.R.drawable.search_none}"
-            tools:src="@drawable/search_none" />
+            tools:src="@drawable/search_none"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:id="@+id/linearLayout"

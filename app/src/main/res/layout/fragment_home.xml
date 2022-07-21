@@ -93,8 +93,8 @@
                     android:text="@={viewModel.searchQuery}"
                     android:textColorHint="@color/colorHint"
                     android:textSize="15sp"
-                    app:setOnFocusChangeListener="@{focusListener}"
-                    app:addTextChangedListener="@{textListener}"/>
+                    app:addTextChangedListener="@{textListener}"
+                    app:setOnFocusChangeListener="@{focusListener}" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -114,6 +114,7 @@
                         android:src="@drawable/btn_delete"
                         android:visibility="@{viewModel.notBlankContents ? View.VISIBLE : View.GONE}"
                         app:onSingleClick="@{() -> viewModel.onClearEdit()}"
+                        tools:ignore="ContentDescription"
                         tools:visibility="visible" />
 
                     <ImageView
@@ -125,7 +126,8 @@
                         android:paddingTop="5dp"
                         android:paddingEnd="16dp"
                         android:paddingBottom="5dp"
-                        android:src="@drawable/btn_search_02" />
+                        android:src="@drawable/btn_search_02"
+                        tools:ignore="ContentDescription" />
                 </LinearLayout>
             </FrameLayout>
 
@@ -144,7 +146,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:onSingleClick="@{() -> viewModel.onSearchClick()}"/>
+                app:onSingleClick="@{() -> viewModel.onSearchClick()}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

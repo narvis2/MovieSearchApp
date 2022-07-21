@@ -77,6 +77,7 @@ fun Context.hideKeyboard(view: View? = null) {
         getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.hideSoftInputFromWindow(view.windowToken, 0)
 
+    @Suppress("DEPRECATION")
     if (Build.VERSION.SDK_INT < 26) {
         imm.hideSoftInputFromInputMethod(view.windowToken, 0)
     }

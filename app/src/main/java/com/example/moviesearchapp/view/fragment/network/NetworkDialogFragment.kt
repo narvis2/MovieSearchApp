@@ -35,6 +35,7 @@ class NetworkDialogFragment : BaseDialogFragment<FragmentNetworkDialogBinding, N
     private fun networkViewModelCallback() = with (viewModel) {
         currentNetworkStatus.observe(viewLifecycleOwner) {
             when(it) {
+                // 네트워크가 다시 연결되었을 때 popBackStack()
                 NetworkStatus.CONNECT_NETWORK -> {
                     findNavController().popBackStack()
                 }
@@ -55,6 +56,7 @@ class NetworkDialogFragment : BaseDialogFragment<FragmentNetworkDialogBinding, N
         super.onStart()
         val d = dialog
         if (activity is MainActivity) {
+            // Dialog Cancel 할 수 없게 설정
             d?.setCancelable(false)
         }
     }

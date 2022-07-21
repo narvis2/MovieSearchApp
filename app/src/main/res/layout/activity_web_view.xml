@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
@@ -44,7 +45,8 @@
                     android:src="@drawable/btn_back"
                     app:layout_constraintBottom_toBottomOf="@+id/title_tv"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/title_tv" />
+                    app:layout_constraintTop_toTopOf="@+id/title_tv"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/title_tv"

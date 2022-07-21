@@ -10,6 +10,7 @@ import com.example.moviesearchapp.R
 import com.example.moviesearchapp.databinding.ActivityMainBinding
 import com.example.moviesearchapp.base.BaseActivity
 import com.example.moviesearchapp.utils.showSnackBar
+import com.example.moviesearchapp.view.fragment.network.NetworkStatus
 import com.example.moviesearchapp.view.fragment.network.NetworkViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,6 +49,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
             }
         }
 
+        // Network Callback 등록
         networkViewModel.register(true)
         initNetworkViewModelCallback()
     }
@@ -55,7 +57,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     private fun initNetworkViewModelCallback() = with (networkViewModel) {
         currentNetworkStatus.observe(this@MainActivity) {
             when (it) {
-                com.example.moviesearchapp.view.fragment.network.NetworkStatus.CONNECT_NETWORK -> {}
+                NetworkStatus.CONNECT_NETWORK -> {
+                    // TODO: 네트워크 연결 시 동작 등록..
+                }
+                // 네트워크가 끊기거나 Error 일 경우 NetworkDialogFragment 보여줌
                 else -> {
                     navController.navigate(
                         NavigationDirections.actionGlobalNetworkDialogFragment(it)
@@ -66,6 +71,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     }
 
     override fun onDestroy() {
+        // Network Callback 제거
         networkViewModel.unRegister()
         super.onDestroy()
     }
