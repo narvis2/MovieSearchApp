@@ -7,11 +7,11 @@
 
         <import type="android.view.View" />
 
-        <import type="com.example.moviesearchapp.presentation.view.fragment.MovieLoadingType" />
+        <import type="com.example.moviesearchapp.view.fragment.home.MovieLoadingType" />
 
         <variable
             name="viewModel"
-            type="com.example.moviesearchapp.presentation.view.fragment.HomeViewModel" />
+            type="com.example.moviesearchapp.view.fragment.home.HomeViewModel" />
 
         <variable
             name="focusListener"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="13dp"
-        tools:context=".presentation.view.fragment.HomeFragment">
+        tools:context=".view.fragment.home.HomeFragment">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/refreshView"
