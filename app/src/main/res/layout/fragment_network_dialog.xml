@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="android.view.View" />
 
         <import type="com.example.moviesearchapp.view.fragment.network.NetworkStatus" />
@@ -16,8 +17,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.fragment.network.NetworkDialogFragment"
-        android:background="#55000000">
+        android:background="#55000000"
+        tools:context=".view.fragment.network.NetworkDialogFragment">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -37,7 +38,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/search_none_w" />
+                    android:src="@drawable/search_none_w"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/networkTv"
@@ -71,11 +73,11 @@
                         android:background="@drawable/positive_bg2"
                         android:letterSpacing="-0.02"
                         android:lineSpacingExtra="-4sp"
+                        android:text="@string/str_retry"
                         android:textColor="#ffffff"
                         android:textSize="14sp"
-                        android:text="@string/str_retry"
                         app:onSingleClick="@{() -> viewModel.onReTryClick()}"
-                        tools:text="@string/str_retry"/>
+                        tools:text="@string/str_retry" />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>

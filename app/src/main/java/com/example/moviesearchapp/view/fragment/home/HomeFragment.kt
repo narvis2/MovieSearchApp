@@ -133,11 +133,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
             override fun onClick(item: MovieInfoModel, position: Int) {
                 startActivity(
                     WebViewActivity.getInAppBrowserIntent(
-                    activity = requireActivity(),
-                    url = item.link,
-                    pageTitle = "영화 상세 정보",
-                    showTitle = true
-                ))
+                        activity = requireActivity(),
+                        url = item.link,
+                        pageTitle = "영화 상세 정보",
+                        showTitle = true
+                    )
+                )
             }
         })
 

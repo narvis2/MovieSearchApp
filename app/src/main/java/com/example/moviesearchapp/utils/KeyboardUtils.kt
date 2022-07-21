@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 
 /**
+ * @author choi young jun
  * OnGlobalLayoutListener -> View 의 전체 영역이 바뀔때 호출됨
  * 주의 : windowSoftInputMode 에 adjustNothing 을 사용하면 View 의 변경을 알 수 없어 Listener 가 동작하지 않음
  */
