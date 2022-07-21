@@ -125,7 +125,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
                     MovieLoadingType.VIEW
                 }
 
-                else -> MovieLoadingType.VIEW
+                else -> MovieLoadingType.LOADING
             }
         }
 
