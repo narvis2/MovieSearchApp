@@ -6,17 +6,17 @@
     <data>
         <import type="android.view.View" />
 
-        <import type="com.example.moviesearchapp.presentation.view.fragment.network.NetworkStatus" />
+        <import type="com.example.moviesearchapp.view.fragment.network.NetworkStatus" />
 
         <variable
             name="viewModel"
-            type="com.example.moviesearchapp.presentation.view.fragment.network.NetworkViewModel" />
+            type="com.example.moviesearchapp.view.fragment.network.NetworkViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.view.fragment.network.NetworkDialogFragment"
+        tools:context=".view.fragment.network.NetworkDialogFragment"
         android:background="#55000000">
 
         <FrameLayout

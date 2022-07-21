@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.moviesearchapp.presentation.view.activity.web.WebViewViewModel" />
+            type="com.example.moviesearchapp.view.activity.web.WebViewViewModel" />
     </data>
 
     <FrameLayout

@@ -6,13 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.moviesearchapp.presentation.view.activity.MainViewModel" />
+            type="com.example.moviesearchapp.view.activity.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.view.activity.MainActivity">
+        tools:context=".view.activity.main.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navHostFragmentContainer"

@@ -8,11 +8,11 @@
 
         <variable
             name="info"
-            type="com.example.moviesearchapp.domain.model.MovieInfoModel" />
+            type="com.example.domain.model.MovieInfoModel" />
 
         <variable
             name="presenter"
-            type="com.example.moviesearchapp.presentation.view.fragment.adapter.MovieInfoAdapter.MovieRankingPresenter" />
+            type="com.example.moviesearchapp.view.fragment.home.adapter.MovieInfoAdapter.MovieRankingPresenter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
