@@ -5,9 +5,9 @@
 - [Wiki Document](https://github.com/narvis2/MovieSearchApp/wiki/%EC%95%B1-%EC%84%B8%EB%B6%80-%EC%A0%95%EB%B3%B4)
 
 ## 앱 사진
-|매인 화면|키보드 포커스|검색 결과|
-|---|---|---|
-|<img src="https://user-images.githubusercontent.com/74344026/180112247-bf22bbf6-7806-424a-9da2-54a2200e9f7d.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112692-a1ce70c4-5401-43f0-b5fe-0cba3700b640.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112806-daeb0680-25b6-4ed8-bde9-51ebb760bc8a.jpg" width="200" height="400" />|
+|매인 화면|키보드 포커스|검색 결과|빈값 검색|
+|---|---|---|---|
+|<img src="https://user-images.githubusercontent.com/74344026/180112247-bf22bbf6-7806-424a-9da2-54a2200e9f7d.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112692-a1ce70c4-5401-43f0-b5fe-0cba3700b640.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112806-daeb0680-25b6-4ed8-bde9-51ebb760bc8a.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180337230-fda0ba08-8e82-4807-9108-b938685b10a9.jpg" width ="200" height ="400" />
 
 |네트워크 끊김|스크롤|영화 상세|
 |---|---|---|
