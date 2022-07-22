@@ -55,7 +55,7 @@ domain
 * Clean Archtecture
 * Multi-Module Project
 * DataBinding
-* kotlin Coroutne
+* kotlin Coroutine
 * Jetpack Navigation
 * AAC ViewModel
 * LiveData
