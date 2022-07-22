@@ -92,6 +92,7 @@
                     android:singleLine="true"
                     android:text="@={viewModel.searchQuery}"
                     android:textColorHint="@color/colorHint"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
                     app:addTextChangedListener="@{textListener}"
                     app:setOnFocusChangeListener="@{focusListener}" />

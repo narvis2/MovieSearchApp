@@ -11,5 +11,5 @@
     <color name="colorHint">#BEC0C7</color>
     <color name="colorDivideLine">#BEC0C7</color>
     <color name="colorTranslucentDim">#70000000</color>
-    <color name="colorBackground">@color/white</color>
+    <color name="colorBackground">#FF121212</color>
 </resources>
