@@ -2,7 +2,7 @@
 
 ### 해당 프로젝트의 설명에 관하여 블로그에 상세히 정리해 두었습니다.
 - [프로젝트 설명 블로그](https://narvis2.github.io/posts/Android-Clean-Architecture/)
-- [WIKI](https://github.com/narvis2/MovieSearchApp/wiki/%EC%95%B1-%EC%84%B8%EB%B6%80-%EC%A0%95%EB%B3%B4)
+- [Wiki Document](https://github.com/narvis2/MovieSearchApp/wiki/%EC%95%B1-%EC%84%B8%EB%B6%80-%EC%A0%95%EB%B3%B4)
 
 ## 앱 사진
 |매인 화면|키보드 포커스|검색 결과|네트워크 끊김|스크롤|영화 상세|
