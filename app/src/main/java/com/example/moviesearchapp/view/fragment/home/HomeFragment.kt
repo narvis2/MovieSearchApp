@@ -118,6 +118,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
 
                     if (scrollReset) {
                         scrollReset = false
+                        binding.topButton.hide()
                         binding.listView.stopScroll()
                         scrollLayoutManager.scrollToPositionWithOffset(0, 0)
                     }
