@@ -9,10 +9,9 @@
 |---|---|---|---|
 |<img src="https://user-images.githubusercontent.com/74344026/180112247-bf22bbf6-7806-424a-9da2-54a2200e9f7d.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112692-a1ce70c4-5401-43f0-b5fe-0cba3700b640.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112806-daeb0680-25b6-4ed8-bde9-51ebb760bc8a.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180337230-fda0ba08-8e82-4807-9108-b938685b10a9.jpg" width ="200" height ="400" />
 
-|네트워크 끊김|스크롤|영화 상세|
-|---|---|---|
-|<img src="https://user-images.githubusercontent.com/74344026/180112877-99546a16-9308-4c0b-a1ea-18e3ed44ba49.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112931-d777fdbb-427f-4018-a056-eaa63d001f7b.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112981-b64f9063-e06a-4133-b4ac-ff410450280c.jpg" width="200" height="400" />|
-
+|네트워크 끊김|스크롤|영화 상세|뒤로 가기|
+|---|---|---|---|
+|<img src="https://user-images.githubusercontent.com/74344026/180112877-99546a16-9308-4c0b-a1ea-18e3ed44ba49.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112931-d777fdbb-427f-4018-a056-eaa63d001f7b.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112981-b64f9063-e06a-4133-b4ac-ff410450280c.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180337338-40490d4e-1575-4fe9-b5cd-c9dce6f26092.jpg" width="200" height="400" />
 
 ## 기존 폴더 구조
 ```sh
