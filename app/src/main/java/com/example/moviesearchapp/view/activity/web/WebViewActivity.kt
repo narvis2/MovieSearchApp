@@ -9,10 +9,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Message
 import android.webkit.*
+import android.webkit.WebView.HitTestResult.UNKNOWN_TYPE
 import androidx.activity.viewModels
 import com.example.moviesearchapp.R
-import com.example.moviesearchapp.databinding.ActivityWebViewBinding
 import com.example.moviesearchapp.base.BaseActivity
+import com.example.moviesearchapp.databinding.ActivityWebViewBinding
 import com.example.moviesearchapp.utils.observeInLifecycleStop
 import com.example.moviesearchapp.view.activity.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -77,7 +78,7 @@ class WebViewActivity : BaseActivity<ActivityWebViewBinding, WebViewViewModel>(
             view: WebView,
             url: String,
         ): Boolean {
-            return urlLoading(view, url)
+            return urlLoading(view, url, view.hitTestResult.type)
         }
 
         @TargetApi(Build.VERSION_CODES.N)
@@ -86,32 +87,31 @@ class WebViewActivity : BaseActivity<ActivityWebViewBinding, WebViewViewModel>(
             request: WebResourceRequest,
         ): Boolean {
             val url = request.url.toString()
-            return urlLoading(view, url)
+            // 사용자가 웹뷰에서 클릭한 정보 얻어오기
+            val type = view.hitTestResult.type
+
+            return urlLoading(view, url, type)
         }
 
         private fun urlLoading(
             view: WebView,
             url: String,
+            type: Int
         ): Boolean {
-            if (!URLUtil.isNetworkUrl(url) && !URLUtil.isJavaScriptUrl(url)) {
-                val uri = try {
-                    Uri.parse(url)
-                } catch (e: Exception) {
-                    return false
-                }
+            return if (!viewModel.showProgress.value) {
+                // 클릭한 정보가 불분명한 타입이 아닐 경우에만 loadUrl 실행 후 true 반환
+                if (type > UNKNOWN_TYPE) {
+                    CoroutineScope(Dispatchers.Main).launch {
+                        view.loadUrl(url)
+                    }
 
-                return try {
-                    startActivity(Intent(Intent.ACTION_VIEW, uri))
                     true
-                } catch (e: Exception) {
+                } else {
                     false
                 }
+            } else {
+                false
             }
-
-            CoroutineScope(Dispatchers.Main).launch {
-                view.loadUrl(url)
-            }
-            return true
         }
 
         @Suppress("DEPRECATION")
