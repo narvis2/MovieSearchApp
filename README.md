@@ -7,7 +7,7 @@
 ## 앱 사진
 |매인 화면|키보드 포커스|검색 결과|
 |---|---|---|
-|<img src="https://user-images.githubusercontent.com/74344026/180112247-bf22bbf6-7806-424a-9da2-54a2200e9f7d.jpg" width="100" height="100" />|<img src="https://user-images.githubusercontent.com/74344026/180112692-a1ce70c4-5401-43f0-b5fe-0cba3700b640.jpg"/>|<img src="https://user-images.githubusercontent.com/74344026/180112806-daeb0680-25b6-4ed8-bde9-51ebb760bc8a.jpg"/>|
+|<img src="https://user-images.githubusercontent.com/74344026/180112247-bf22bbf6-7806-424a-9da2-54a2200e9f7d.jpg" width="300" height="300" />|<img src="https://user-images.githubusercontent.com/74344026/180112692-a1ce70c4-5401-43f0-b5fe-0cba3700b640.jpg"/>|<img src="https://user-images.githubusercontent.com/74344026/180112806-daeb0680-25b6-4ed8-bde9-51ebb760bc8a.jpg"/>|
 
 |네트워크 끊김|스크롤|영화 상세|
 |---|---|---|
