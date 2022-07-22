@@ -48,7 +48,7 @@ domain
 │ │ │ │ ├─ usecase      
 ```
 
-### 주요 사용 기술
+## 주요 사용 기술
 * Kotlin
 * MVC
 * MVVM
