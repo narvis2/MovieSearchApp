@@ -11,7 +11,7 @@
 
 |네트워크 끊김|스크롤|영화 상세|뒤로 가기|
 |---|---|---|---|
-|<img src="https://user-images.githubusercontent.com/74344026/180112877-99546a16-9308-4c0b-a1ea-18e3ed44ba49.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112931-d777fdbb-427f-4018-a056-eaa63d001f7b.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112981-b64f9063-e06a-4133-b4ac-ff410450280c.jpg" width="200" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180337338-40490d4e-1575-4fe9-b5cd-c9dce6f26092.jpg" width="200" height="400" />
+|<img src="https://user-images.githubusercontent.com/74344026/180112877-99546a16-9308-4c0b-a1ea-18e3ed44ba49.jpg" width="300" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112931-d777fdbb-427f-4018-a056-eaa63d001f7b.jpg" width="300" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180112981-b64f9063-e06a-4133-b4ac-ff410450280c.jpg" width="300" height="400" />|<img src="https://user-images.githubusercontent.com/74344026/180337338-40490d4e-1575-4fe9-b5cd-c9dce6f26092.jpg" width="300" height="400" />
 
 ## 기존 폴더 구조
 ```sh
