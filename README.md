@@ -64,7 +64,7 @@ domain
 * Retrofit2
 * Okhttp3
 * Gson
-* Swiperefreshlayout
+* SwiperefreshLayout
 * Timber
 * Paging3
 * Material Design
