@@ -16,8 +16,8 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-        buildConfigField ("String", "NAVE_CLIENT_ID", "\"rP8PEBH4MIBMeT46ZnxY\"")
-        buildConfigField ("String", "NAVE_CLIENT_SECRET", "\"lPjMbS7dJ3\"")
+        buildConfigField ("String", "NAVE_CLIENT_ID", NAVE_CLIENT_ID)
+        buildConfigField ("String", "NAVE_CLIENT_SECRET", NAVE_CLIENT_SECRET)
         buildConfigField ("String", "API_HOST", "\"https://openapi.naver.com/\"")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
