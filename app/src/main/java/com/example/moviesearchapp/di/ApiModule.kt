@@ -78,6 +78,10 @@ object ApiModule {
         }
     }
 
+    /**
+     * @param X-Naver-Client-Id : 네이버에서 받은 Client Id 를 입력합니다.
+     * @param X-Naver-Client-Secret : 네이버에서 받은 Client Secret 을 입력합니다.
+     */
     @Singleton
     @Provides
     fun provideInterceptor(): Interceptor = Interceptor { chain ->
